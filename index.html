@@ -96,6 +96,60 @@
             </div>
             <!--/Űrlapok-->
             
+            
+            <!-- Gombcsoport -->
+            <h1>Gombcsoport</h1>
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="btn-group" role="group" aria-label="...">
+                      <button type="button" class="btn btn-default">
+                          <span class="glyphicon glyphicon-play"></span>
+                      </button>
+                      <button type="button" class="btn btn-default">
+                          <span class="glyphicon glyphicon-volume-off"></span>
+                      </button>
+                      <button type="button" class="btn btn-default">
+                          <span class="glyphicon glyphicon-pause"></span>
+                      </button>
+                    </div>
+                </div>
+                
+                <div class="clearfix">&nbsp;</div>
+                
+                <div class="col-xs-12">
+                    <div class="alert alert-warning alert-dismissible" role="alert">
+                      <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                      <strong>Warning!</strong> Better check yourself, you're not looking too good.
+                    </div>
+                </div>
+                
+                <div class="clearfix">&nbsp;</div>
+                
+                <div class="col-xs-3">
+                    <div class="input-group">
+                      <input type="text" class="form-control progress-value" placeholder="Folyamat állása">
+                      <span class="input-group-btn">
+                        <button class="btn btn-default" type="button" 
+                        onclick="changeProgress()">ok</button>
+                      </span>
+                    </div><!-- /input-group -->
+                  </div><!-- /.col-lg-6 -->
+                
+                <div class="clearfix">&nbsp;</div>
+                
+                <!-- Progress bar -->
+                <div class="progress">
+                  <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 45%">
+                    <span class="sr-only">45% Complete</span>
+                  </div>
+                </div>
+                <!-- /Progress bar -->
+                
+            </div>
+            <!-- /Gombcsoport -->
+            
+            
+            <!-- Rácsrendszer -->
             <h1>Bootstrap rácsrendszer</h1>
             <div class="row test-row">
                 <div class="col-xs-12 col-sm-6 col-md-4 col-lg-2">x</div>
@@ -164,7 +218,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     
     <!-- Ebben van a térkép megjelenítő Google függvény -->
-<!--    <script src="js/main.js"></script>-->
+    <script src="js/main.js"></script>
     
     <script src="js/trans.js"></script>
         

@@ -47,3 +47,29 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
                         'Error: The Geolocation service failed.' :
                         'Error: Your browser doesn\'t support geolocation.');
 }
+
+// Progress bar programozása
+// 
+function changeProgress(progress){
+    if(!progress){
+        // 
+        progress=document.querySelector(".progress-value").value;
+    }
+    
+    // Ha a kiolvasott érték tartalmaz nem száot, azt kiszedi reguláris kifezéssel
+    // Minden nem szám elemet cseréld le egy üres sztringre
+    progress = progress.replace(/,/g, "."); // vesszők pontra
+    progress = progress.replace(/[^0-9\.]/g, ""); //nem (szám és pontot) semmire
+    // mostmár a tizedesvesszőt is kezeli
+    
+    progress = parseFloat(progress,10);
+    //console.log(progress);
+    
+    // Ha nem kapott értéket, vagy nem szám akkor gyere vissza
+    if(!progress || isNaN(progress)){
+        return;
+    }
+    
+   var bar = document.querySelector(".progress .progress-bar")
+   bar.style.width=progress + "%";
+}
