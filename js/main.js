@@ -73,3 +73,27 @@ function changeProgress(progress){
    var bar = document.querySelector(".progress .progress-bar")
    bar.style.width=progress + "%";
 }
+
+
+//Késleltetett megjelenítés:
+// 5 sec múlva lefut a függvény
+setTimeout(showModal, 5000);
+
+function showModal(){
+    //megkeressük a modális ablakot és elindítjuk
+    $("#myModal").modal("show");
+}
+
+/*
+//Időzítés névtelen függvénnyel
+setTimeout( function (){
+    //megkeressük a modális ablakot és elindítjuk
+    $("#myModal").modal("show");
+}, 5000);
+
+*/
+
+//Popower beállítása (inicializálása)
+$('#popower1').popover()
+
+
